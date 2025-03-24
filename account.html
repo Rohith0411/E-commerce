@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Shopzee</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+ <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images\logo.jpeg" width="80px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="web.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart img.webp" class="cart-img" width="=30px" height="30px"></a>
+            <img src="RedStore_Img/images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+        <div class="account-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/img1.jpg" width="100%">
+                    </div>
+                    <div class="col-2">
+                        <div class="form-container">
+                            <div class="form-btn">
+                                <span onclick="login()">Login</span>
+                                <span onclick="register()">Register</span>
+                                <hr id="Indicator">
+                            </div>
+                            <form id="Logform">
+                                <input type="text" placeholder="Username">
+                                <input type="password" placeholder="Password">
+                                <button type="submit" class="btn">Login</button>
+                                <a href="">Forgot Password</a>
+                            </form>
+                            <form id="Regform">
+                                <input type="text" placeholder="Username">
+                                <input type="email" placeholder="Email">
+                                <input type="password" placeholder="Password">
+                                <button type="submit" class="btn">Register</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+ 
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download The App</h3>
+               <p>Download App For Android And Ios Mobile Phones.</p>
+               <div class="app-logo">
+                <img src="RedStore_Img/images/play-store.png">
+                <img src="RedStore_Img/images/app-store.png">
+               </div>
+            </div>
+            <div class="footer-col-2">
+
+                <p>Explore our selection and find the perfect items to make your home more 
+                 functional and stylish.</p>
+             </div>
+             <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog post</li>
+                    <li>Return Policy</li>
+                    <li>Join affiliate</li>
+                </ul>
+             </div>
+             <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>Facebook</li>
+                    <li>YouTube</li>
+                </ul>
+             </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2024 - Rohith Website</p>
+    </div>
+</div>
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+
+   function menutoggle(){
+     if(MenuItems.style.maxHeight == "0px")
+     {
+       MenuItems.style.maxHeight = "200px";
+     }
+    else
+    {
+       MenuItems.style.maxHeight = "0px";
+    }
+   }
+</script>
+
+<script>
+    var Logform = document.getElementById("Logform");
+    var Regform = document.getElementById("Regform");
+    var Indicator = document.getElementById("Indicator");
+
+    function register(){
+        Regform.style.transform = "translateX(0px)";
+        Logform.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(100px)";
+
+
+    }
+    function login(){
+        Regform.style.transform = "translateX(300px)";
+        Logform.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+ 
+    }
+
+</script>
+    
+    
+</body>
+</html>
